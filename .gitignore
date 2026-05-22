@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# MNIST 缓存
+.mnist_cache/
+
+# 输出图片 (太大，本地保留即可)
+viz/
+*.png
+
+# 模型权重
+*.pth
+*.pt
+*.bin
+*.safetensors
+checkpoints/
+
+# 环境
+.env
+
+.mnist_cache/
