@@ -15,8 +15,8 @@
 |------|------|------|------|
 | 0 | 深度学习基础 | [纯 NumPy 手写 MLP · MNIST 分类](stage0-mlp-numpy/) | ✅ |
 | 1 | CNN + RNN | ResNet-18 + LSTM 文本生成 | 🔜 |
-| 2 | NLP 基础 | Word2Vec + Seq2Seq Attention | 🔜 |
-| 3 | Transformer | 从零实现 Transformer + 小型 GPT | 🔜 |
+| 2 | NLP 基础 | [Word2Vec + Seq2Seq Attention](stage2-nlp-attention/) | ✅ |
+| 3 | Transformer | [从零实现 Transformer + GPT-2 语言模型](stage3-transformer/) | ✅ |
 | 4 | LLM 预训练 | ~100M 参数 GPT + LLaMA 架构 | 🔜 |
 | 5 | 指令微调 | SFT + LoRA + DPO | 🔜 |
 | 6 | 推理优化 | KV Cache + 量化 + 部署 | 🔜 |
