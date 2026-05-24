@@ -34,5 +34,10 @@ checkpoints/
 
 # 环境
 .env
+.claude/
 
+# 数据集（太大，不提交）
+*.tar.gz
+**/data/
+.shakespeare.txt
 .mnist_cache/
