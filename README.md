@@ -14,10 +14,10 @@
 | 阶段 | 主题 | 项目 | 状态 |
 |------|------|------|------|
 | 0 | 深度学习基础 | [纯 NumPy 手写 MLP · MNIST 分类](stage0-mlp-numpy/) | ✅ |
-| 1 | CNN + RNN | ResNet-18 + LSTM 文本生成 | 🔜 |
+| 1 | CNN + RNN | [ResNet-18 + LSTM 文本生成](stage1-cnn-rnn/) | ✅ |
 | 2 | NLP 基础 | [Word2Vec + Seq2Seq Attention](stage2-nlp-attention/) | ✅ |
 | 3 | Transformer | [从零实现 Transformer + GPT-2 语言模型](stage3-transformer/) | ✅ |
-| 4 | LLM 预训练 | ~100M 参数 GPT + LLaMA 架构 | 🔜 |
+| 4 | LLM 预训练 | [~100M 参数 LLaMA 架构 · 预训练](stage4-llm-pretrain/) | ✅ |
 | 5 | 指令微调 | SFT + LoRA + DPO | 🔜 |
 | 6 | 推理优化 | KV Cache + 量化 + 部署 | 🔜 |
 | 7 | 前沿架构 | MoE + 多模态 | 🔜 |
@@ -30,13 +30,23 @@
 cd stage0-mlp-numpy
 python main.py          # 训练模型（MNIST 上 98%+ 准确率）
 python interpret.py     # 可解释性分析（生成预测可视化图片）
+
+# 阶段 4：LLaMA 预训练 (组件测试)
+cd stage4-llm-pretrain/llama-components
+python test_components.py   # 运行 6 项测试验证 RMSNorm/SwiGLU/RoPE/GQA
+
+# 阶段 4：LLaMA 预训练 (tiny 模型)
+cd stage4-llm-pretrain/pretrain
+python main.py --model tiny --epochs 1   # CPU 训练小模型
 ```
 
 ## 环境要求
 
 - Python 3.10+
 - NumPy, Matplotlib
-- (后续阶段) PyTorch 2.x, HuggingFace Transformers
+- PyTorch 2.x
+- (可选) sentencepiece (BPE tokenizer)
+- (可选) HuggingFace Transformers
 
 ## 参考资源
 
